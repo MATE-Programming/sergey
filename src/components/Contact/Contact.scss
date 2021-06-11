@@ -1,0 +1,243 @@
+@import '../../colors.scss';
+
+.contact {
+  margin-top: 150px;
+  background: url("../../assets/image/bgContact.png") no-repeat center center;
+  background-size: contain;
+  padding-bottom: 130px;
+
+  .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border-color: $purple;
+    box-shadow: 0 0 0 2px rgba(32, 24, 255, 0.2);
+  }
+
+  .ant-select {
+    .ant-select-selector:hover {
+      border-color: $purple;
+    }
+  }
+
+  .title {
+    height: 120px;
+  }
+
+  .ant-select {
+    width: 100%;
+
+    .ant-select-selector {
+      width: 100%;
+      height: 50px;
+      padding: 9px 11px;
+      border: 0.5px solid #D1D1D1;
+      box-sizing: border-box;
+      border-radius: 8px;
+
+      &:focus {
+        transition: 500ms;
+        border-color: $purple;
+      }
+    }
+  }
+
+  h3 {
+    font-weight: 800;
+    font-size: 36px;
+    color: $black;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  input {
+    height: 48px;
+    width: 100%;
+    background: $white;
+    border: 0.5px solid #D1D1D1;
+    border-radius: 8px;
+    padding-left: 12px;
+    outline: none;
+    transition: 0.5s;
+
+    &:hover {
+      transition: 0.5s;
+      border-color: $purple;
+    }
+
+    &:focus {
+      transition: 500ms;
+      border-color: $purple;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      color: #8C8C8C;
+    }
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 8px;
+    margin-top: 15px;
+  }
+
+  form p {
+    font-weight: 600;
+  }
+
+  .contactForm {
+    background: $white;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 35px;
+    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.15), inset 0px -6px 0px #5811CB;
+    border-radius: 8px;
+
+    .publicLesson {
+      background: $white;
+
+      .button {
+        text-align: center;
+
+        .buyOneClick {
+          font-weight: 600;
+          font-size: 16px;
+          background: transparent;
+          border: 2px solid $purple;
+          color: $purple;
+        }
+
+        button {
+          margin-top: 30px;
+          width: 250px;
+          min-height: 48px;
+          background: $purple;
+          border-radius: 8px;
+          color: $white;
+          border: none;
+          font-weight: 600;
+          font-size: 18px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .oneClick {
+      margin-top: 40px;
+
+      .buttons {
+        margin-top: 30px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        button {
+          pointer-events: none;
+          width: 250px;
+          min-height: 48px;
+          background: $white;
+          border-radius: 8px;
+          color: $black;
+          border: 1.5px solid #B5B4B7;
+          cursor: pointer;
+          font-weight: 600;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .contact {
+    h3 {
+      font-size: 30px;
+      line-height: 100%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .contact {
+    form {
+      margin-top: 30px;
+    }
+
+    .oneClick {
+      .buttons {
+        flex-direction: column;
+
+        button {
+          margin-top: 20px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    grid-template-columns: 1fr;
+    background: none;
+
+    .title {
+      height: 80px;
+    }
+
+    .contactForm {
+      .publicLesson {
+        border: none;
+        padding-right: 0;
+
+        .button {
+          button {
+            margin-top: 20px;
+            width: 100%;
+          }
+        }
+      }
+
+      .oneClick {
+        margin: 0 auto;
+        padding: 0;
+
+        .buttons {
+          flex-direction: column;
+          margin-top: 0;
+
+          button {
+            margin-top: 20px;
+            width: 100%;
+          }
+        }
+
+        h3 {
+          margin-top: 20px;
+        }
+      }
+    }
+
+
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    form {
+      margin-top: 25px;
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  .contact {
+    .title {
+      height: unset;
+    }
+  }
+}

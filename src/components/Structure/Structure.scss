@@ -1,0 +1,52 @@
+@import '../../colors.scss';
+
+.structure {
+  margin-top: 150px;
+
+  .structureGrid {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0 25px;
+
+    .item {
+      background: $white;
+      box-shadow: 0 4px 28px rgba(0, 0, 0, 0.15), inset 0px -6px 0px #5811CB;
+      border-radius: 8px;
+      padding: 30px;
+
+      span {
+        display: flex;
+
+        img {
+          margin-right: 4px;
+          height: 25px;
+          margin-top: 3px;
+        }
+      }
+
+      h4 {
+        font-weight: bold;
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .structure {
+    .structureGrid {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px 30px;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .structure {
+    .structureGrid {
+      grid-template-columns: 1fr;
+      gap: 15px 0;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import '../../colors.scss';
+
+.videoBanner {
+  margin-top: 150px;
+
+  h2 {
+    text-align: center;
+  }
+
+  .video {
+    height: 450px;
+    background: black;
+    position: relative;
+    text-align: center;
+  }
+
+  h3 {
+    font-weight: 800;
+    font-size: 48px;
+    color: $white;
+    padding-top: 200px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .videoBanner {
+    margin-top: 70px;
+
+    .video {
+      height: 350px;
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: 100%;
+      padding-top: 150px;
+    }
+  }
+}

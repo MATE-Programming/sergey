@@ -1,0 +1,57 @@
+@import '../../colors.scss';
+
+header {
+  display: flex;
+  margin-top: 24px !important;
+  position: relative;
+
+  .mobileMenu {
+    display: none;
+
+    .mobileMenuContainer {
+      width: 100%;
+      position: absolute;
+      background: #D3D3D3;
+      left: 0;
+      top: 35px;
+      padding: 30px;
+      text-align: center;
+
+      .icons {
+        display: flex;
+        margin-top: 40px;
+        justify-content: center;
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+  }
+
+  img {
+    margin-right: 25px;
+  }
+
+  p {
+    margin: 0 25px 0 0;
+    color: $black;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 575.98px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+
+    .mobileMenu {
+      display: block;
+    }
+
+    nav {
+      display: none;
+    }
+  }
+}

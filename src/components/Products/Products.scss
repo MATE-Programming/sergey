@@ -1,0 +1,45 @@
+@import '../../colors.scss';
+
+.products {
+  margin-top: 150px;
+
+  .products-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    img {
+      width: 100%;
+      padding-right: 20px;
+    }
+
+    a {
+      margin-top: 20px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .products {
+    .products-container {
+      grid-template-columns: 1fr 1fr;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .products {
+    margin-top: 150px;
+
+    .products-container {
+      grid-template-columns: 1fr;
+
+      img {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+}

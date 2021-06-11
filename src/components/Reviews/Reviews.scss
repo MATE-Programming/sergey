@@ -1,0 +1,194 @@
+@import '../../colors.scss';
+
+.reviews {
+  filter: drop-shadow(0px 4px 28px rgba(0, 0, 0, 0.15));
+
+  .slideContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: $white;
+    position: relative;
+    box-shadow: inset -6px 0px 0px #5811CB;
+    border-radius: 8px;
+    padding: 0 95px 15px 0;
+    margin-top: 115px;
+    grid-template-areas:
+    "student text";
+
+    .avatar {
+      span {
+        display: none;
+      }
+
+      .student {
+        img {
+          position: absolute;
+          bottom: 0;
+        }
+
+        grid-area: student;
+      }
+
+      .name {
+        display: none;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: $purple;
+        margin-top: 5px;
+      }
+    }
+
+
+    .text {
+      grid-area: text;
+
+      span {
+        display: flex;
+        margin: 30px 0 25px 0;
+
+        h2 {
+          padding-left: 7px;
+          margin: 0;
+        }
+
+        img {
+          height: 100%;
+        }
+      }
+
+      p {
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 22px;
+        color: $black;
+      }
+
+      .name {
+        font-weight: 600;
+        font-size: 16px;
+        color: $purple;
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .reviews {
+    .slideContainer {
+      .avatar {
+        .student {
+          img {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .reviews {
+    .slideContainer {
+      padding-left: 25px;
+      padding-right: 25px;
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+    "text student";
+
+      .avatar {
+        margin-top: 50%;
+        margin-left: 20px;
+        text-align: center;
+
+        .student {
+          img {
+            position: static;
+            height: 120px;
+            width: 120px;
+            border: 1px solid #E6E6E6;
+            border-radius: 60px;
+            padding: 5px 5px 0 5px;
+          }
+
+          .name {
+            display: block;
+          }
+        }
+      }
+
+      .text {
+        p {
+          border-right: 2px solid #E6E6E6;
+          padding-right: 25px;
+        }
+
+        .title {
+          font-size: 35px;
+        }
+
+        .name {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .reviews {
+    .slideContainer {
+      margin-top: 20px;
+      box-shadow: 0 4px 28px rgba(0, 0, 0, 0.15), inset 0px -6px 0px #5811CB;
+      padding: 25px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+    "student"
+    "text";
+
+      .text {
+        p {
+          border: none;
+          padding: 0;
+        }
+
+        span {
+          display: none;
+        }
+      }
+
+      .avatar {
+        margin: 0 0 25px 0;
+
+        .student {
+          display: grid;
+          grid-template-columns: 1fr 3fr;
+
+          img {
+            width: 70px;
+            height: 70px;
+          }
+
+          p {
+            margin-top: 12px;
+            margin-left: 15px;
+          }
+        }
+
+        span {
+          display: block;
+          text-align: left;
+
+          h2 {
+            font-size: 24px;
+          }
+
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

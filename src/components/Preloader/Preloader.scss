@@ -1,0 +1,18 @@
+//@import '../../colors.scss';
+
+.preloader{
+  position: fixed;
+  transition: 1s;
+  z-index: 242;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background: #D3D3D3;
+  img{
+    margin-top: 15%;
+    width: 250px;
+    transition: 1s;
+  }
+}
